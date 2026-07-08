@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" alt="OmniSocial Banner" width="100%" style="border-radius: 12px; margin-bottom: 20px; max-height: 250px; object-fit: cover;" />
+  
 
   <h1 align="center">🌌 OmniSocial</h1>
 
