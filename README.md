@@ -124,6 +124,11 @@ npm run dev
 | **Live Seeding** | 🟢 | Automatic internet scraping to keep the DB fresh |
 
 ---
+<div align="center">
+  <a href="https://github.com/kamalesh4044/social-media">
+    <img src="https://komarev.com/ghpvc/?username=kamalesh4044-social-media&label=PROJECT+VIEWS&color=00ff88&style=for-the-badge" alt="Views"/>
+  </a>
+</div>
 
 <div align="center">
   <i>Built with passion by Kamalesh</i>
