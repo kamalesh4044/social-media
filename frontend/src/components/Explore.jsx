@@ -1,3 +1,4 @@
+import { API_URL } from '../config';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Heart, MessageCircle } from 'lucide-react';
@@ -9,7 +10,7 @@ export default function Explore({ token }) {
   useEffect(() => {
     const fetchExplorePosts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/posts', {
+        const response = await axios.get(`${API_URL}/api/posts`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         

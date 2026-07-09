@@ -1,3 +1,4 @@
+import { API_URL } from '../config';
 import { useState } from 'react';
 import axios from 'axios';
 import { X, Image as ImageIcon, Video, Upload } from 'lucide-react';
@@ -41,7 +42,7 @@ export default function CreatePost({ token, onClose }) {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/posts', formData, {
+      await axios.post(`${API_URL}/api/posts`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data' // Required for file uploads!

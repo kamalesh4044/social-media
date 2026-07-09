@@ -19,7 +19,7 @@ const server = http.createServer(app);
 // Configure Socket.IO with CORS
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // Default Vite React port
+        origin: "*", // Allow all origins for easier production hosting
         methods: ["GET", "POST"]
     }
 });

@@ -1,9 +1,10 @@
+import { API_URL } from '../config';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { io } from 'socket.io-client';
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from 'lucide-react';
 
-const socket = io('http://localhost:3000');
+const socket = io(API_URL);
 
 export default function Feed({ token, user }) {
   const [posts, setPosts] = useState([]);
@@ -15,7 +16,7 @@ export default function Feed({ token, user }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/posts', {
+        const response = await axios.get(`${API_URL}/api/posts`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setPosts(response.data);
