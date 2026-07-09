@@ -56,6 +56,9 @@ const upload = multer({
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Serve the static frontend built files in production
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
 // --- AUTHENTICATION ENDPOINTS ---
 
 // REGISTER ENDPOINT - Direct Account Creation
@@ -248,6 +251,10 @@ async function fetchPicsumPosts(userId) {
         console.error("Picsum fetching error:", e.message);
     }
 }
+// React Router catch-all: send any non-API requests to the React app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+});
 
 // Start the server
 const PORT = 3000;
