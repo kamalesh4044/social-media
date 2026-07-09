@@ -252,7 +252,7 @@ async function fetchPicsumPosts(userId) {
     }
 }
 // React Router catch-all: send any non-API requests to the React app
-app.get('*', (req, res) => {
+app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
